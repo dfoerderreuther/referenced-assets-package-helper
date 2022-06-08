@@ -1,6 +1,6 @@
 # Referenced assets package helper
 
-This script is searching (grep) for referenced assets in a downloaded and unpacked AEM package. A new and empty package with the references to the assets in filter.xml will be created. The new package can be uploaded and build on AEM server to collect the assets in the package.
+This script is searching (grep) for referenced assets in a downloaded and unpacked AEM package. A new and empty package with the references to the assets in filter.xml will be created. The new package can be uploaded and built on AEM server to collect the assets in the package.
 
 ## Use case: 
 
