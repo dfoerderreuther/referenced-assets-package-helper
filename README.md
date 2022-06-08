@@ -4,13 +4,13 @@ This script is searching (grep) for referenced assets in a downloaded and unpack
 
 ## Use case: 
 
-You received a package from your customer that only contains pages from /content/... Required assets are not part of the package. The entire /content/dam folder is to large to pack.
+You received a package from your customer that only contains pages from /content/... Required assets are not part of the package. The entire /content/dam folder is to large to pack. 
 
 ## Usage
 
 ### 1. Create empty package:
 
-First parameter is path to AEM page. Second parameter the new to create package.
+First parameter is path to a from a package extracted AEM page. Second parameter the name of a new package which eventually contains the missing assets.
 
 ./run.sh ../path/to/crx_root/content/we-retail/us/en/experience we-retail-en-experience-assets
 
@@ -26,3 +26,6 @@ Upload we-retail-en-experience-assets.zip to the AEM instance that contains the 
 
 Download the packkage we-retail-en-experience-assets.zip which now contains the asset binaries.
 
+## Remarks
+
+Tested on Mac only. Parts of the bash scripts - especially the grep command in run.sh line 18 - may require changes on other platforms.

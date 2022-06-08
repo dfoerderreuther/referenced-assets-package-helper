@@ -8,18 +8,22 @@ fi
 
 searchpath=$1
 packagename=$2
+# create empty package definition
 ./package.sh $packagename
 
 tmpfile=_added_filter.xml
 folder=build
 
+# grep for well formated asset paths in $searchpath. Regex is pretty strict as some special characters may brake the definition in filter.xml.
 grep -irohE '\"/content/dam/[a-zA-Z0-9\/_-]*\.(jpg|jpeg|png|pdf|mp4)\"' $searchpath > $tmpfile
 
 lines=$(wc -l < $tmpfile | tr -d ' ')
 
+# reformat path list to xml
 sed -i '' -e 's/^"/<filter root="/' $tmpfile
 sed -i '' -e 's/"$/" \/>/' $tmpfile
 
+# build filter.xml
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" > $folder/META-INF/vault/filter.xml
 echo "<workspaceFilter version=\"1.0\">" >> $folder/META-INF/vault/filter.xml
 cat $tmpfile >> $folder/META-INF/vault/filter.xml
@@ -27,6 +31,7 @@ echo "</workspaceFilter>" >> $folder/META-INF/vault/filter.xml
 
 rm $tmpfile
 
+# zip up package
 cd $folder
 zip -qr ../$packagename.zip .
 cd ..
