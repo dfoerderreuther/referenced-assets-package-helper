@@ -4,7 +4,7 @@ This script is searching (grep) for referenced assets in a downloaded and unpack
 
 ## Use case: 
 
-You received a package from your customer with sites. Required assets are not part of the package. The entire /content/dam folder is to large to pack.
+You received a package from your customer that only contains pages from /content/... Required assets are not part of the package. The entire /content/dam folder is to large to pack.
 
 ## Usage
 
