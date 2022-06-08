@@ -14,6 +14,10 @@ First parameter is path to AEM page. Second parameter the new to create package.
 
 ./run.sh ../path/to/crx_root/content/we-retail/us/en/experience we-retail-en-experience-assets
 
+Result: 
+
+we-retail-en-experience-assets.zip with all grepped asset paths from ../path/to/crx_root/content/we-retail/us/en/experience in filter.xml
+
 ### 2. Build package
 
 Upload we-retail-en-experience-assets.zip to the AEM instance that contains the referenced assets. Press "build"
