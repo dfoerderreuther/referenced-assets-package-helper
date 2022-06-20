@@ -15,7 +15,7 @@ tmpfile=_added_filter.xml
 folder=build
 
 # grep for well formated asset paths in $searchpath. Regex is pretty strict as some special characters may brake the definition in filter.xml.
-grep -irohE '\"/content/dam/[a-zA-Z0-9\/_-]*\.(jpg|jpeg|png|pdf|mp4)\"' $searchpath > $tmpfile
+grep -irohE '\"/content/dam/[a-zA-Z0-9\/_-]*\.(jpg|jpeg|png|pdf|mp4|svg)\"' $searchpath > $tmpfile
 
 lines=$(wc -l < $tmpfile | tr -d ' ')
 
