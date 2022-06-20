@@ -10,7 +10,7 @@ You received a package from your customer that only contains pages from /content
 
 ### 1. Create empty package:
 
-First parameter is path to an AEM page of an extracted AEM package. Second parameter is the name of a new package which eventually will contain the missing assets.
+Start the run script with two mandatory parameters. First parameter is the path to an AEM page of an extracted AEM package. Second parameter is the name of a new package which eventually will contain the missing assets. 
 
 ./run.sh ../path/to/crx_root/content/we-retail/us/en/experience we-retail-en-experience-assets
 
